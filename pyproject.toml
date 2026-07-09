@@ -1,0 +1,16 @@
+[project]
+name = "petpr"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "catboost>=1.2.10",
+    "joblib>=1.5.3",
+    "jupyterlab>=4.6.1",
+    "matplotlib>=3.11.0",
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "plotly>=6.8.0",
+    "scikit-learn>=1.9.0",
+]

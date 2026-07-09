@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+
+# Data files
+data/raw/*.csv
+data/raw/*.zip
+data/processed/*.csv
+data/processed/*.parquet
+
+# Large model files
+models/*.joblib
+models/*.pkl
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+*.ipynb_checkpoints
+
+# CatBoost training logs
+catboost_info/
+notebooks/catboost_info/

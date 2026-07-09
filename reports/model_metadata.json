@@ -1,0 +1,67 @@
+{
+  "project": "Real Estate Price Advisor",
+  "split_type": "time_based",
+  "target": "price",
+  "target_transformation": "log1p(price)",
+  "best_model": "catboost",
+  "numeric_features": [
+    "area",
+    "kitchen_area",
+    "rooms_count",
+    "floor",
+    "floors",
+    "floor_ratio",
+    "is_first_floor",
+    "is_last_floor",
+    "is_studio",
+    "kitchen_area_missing",
+    "geo_lat",
+    "geo_lon",
+    "publication_year",
+    "publication_month",
+    "publication_quarter"
+  ],
+  "categorical_features": [
+    "region",
+    "building_type",
+    "object_type"
+  ],
+  "excluded_features": [
+    "price",
+    "log_price",
+    "price_per_m2",
+    "date",
+    "time",
+    "published_at"
+  ],
+  "metrics": [
+    {
+      "model": "catboost",
+      "MAE": 1292953.708612955,
+      "RMSE": 3847273.595897979,
+      "R2": 0.7638784991755966,
+      "MAPE": 19.951840184110186,
+      "MdAPE": 16.748095591983652,
+      "WAPE": 22.573591266360417
+    },
+    {
+      "model": "dummy_median",
+      "MAE": 3400781.3520729276,
+      "RMSE": 8441421.288495835,
+      "R2": -0.13673842779157197,
+      "MAPE": 48.06139122780992,
+      "MdAPE": 42.268041237113366,
+      "WAPE": 59.37401139466102
+    },
+    {
+      "model": "ridge",
+      "MAE": 4656773.99743429,
+      "RMSE": 1361065873.824925,
+      "R2": -29551.054645298675,
+      "MAPE": 33.399115274320906,
+      "MdAPE": 20.743025013459103,
+      "WAPE": 81.3023019599572
+    }
+  ],
+  "advisor_threshold_percent": 15
+}
