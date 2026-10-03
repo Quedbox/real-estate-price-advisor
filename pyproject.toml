@@ -1,7 +1,7 @@
 [project]
-name = "petpr"
-version = "0.1.0"
-description = "Add your description here"
+name = "real-estate-price-advisor"
+version = "0.2.0"
+description = "A leakage-aware price estimation pipeline for Russian real-estate listings"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -11,6 +11,10 @@ dependencies = [
     "matplotlib>=3.11.0",
     "numpy>=2.4.6",
     "pandas>=3.0.3",
-    "plotly>=6.8.0",
     "scikit-learn>=1.9.0",
+    "scipy>=1.17.1",
 ]
+
+[tool.uv]
+# CatBoost declares Plotly for its plotting helpers; this project uses Matplotlib only.
+exclude-dependencies = ["plotly"]
